@@ -1,0 +1,56 @@
+package zLab_1;
+
+public class Triangle extends GeometricObject {
+	//three private double data fields
+	private double side1;
+	private double side2;
+	private double side3;
+	
+	// no-arg constructor (default)
+	public Triangle() {
+		
+	}
+	
+	// A constructir with specified side1,side2,side3
+	public Triangle(double side1, double side2, double side3 ) {
+		this.side1=side1;
+		this.side2=side2;
+		this.side3=side3;
+	}
+	//The set methods for three data fields.
+	public void setSide1(double side1) {
+		this.side1=side1;
+	}
+	public void setSide2(double side2) {
+		this.side2=side2;
+	}
+
+	public void setSide3(double s3) {
+		side3=s3;
+	}
+	
+	// The get methods for three data fields.
+	public double getSide1() {
+		return side1;
+	}
+	public double getSide2() {
+		return side2;
+	}
+	public double getSide3() {
+		return side3;
+	}
+	//A method named getPerimeter()
+	
+	public double getPerimeter() {
+		return side1+side2+side3;
+	}
+	//A method named toString()
+	
+	public String toString() {
+		return "Triangle has 3 sides. There are Side1 = "+side1+ ", Side2 = "+side2+ " and Side3 = "+side3 +
+				"\nTriangle colour is "+ getColor() +"." +
+				"\nIs the triangle filled? "+(isFilled() ? "Yes, it is filled." : "No, it is not filled.");
+				
+	}
+
+}
