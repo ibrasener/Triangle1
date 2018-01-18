@@ -1,0 +1,36 @@
+package zLab_1;
+import java.util.Scanner;
+public class TestTriangle {
+
+	public static void main(String[] args) {
+		Scanner input= new Scanner(System.in);
+		
+		//Triangle triangle= new Triangle();
+
+		System.out.print("Please enter the triangle sides: ");
+		//Prompts the user to enter three sides of the triangle.
+		double side1=input.nextDouble();
+		double side2=input.nextDouble();
+		double side3=input.nextDouble();
+		//Prompt the user to enter a color 
+		System.out.print("Please enter the triangle colour: ");
+		String colour= input.next();
+		//Prompt the user to enter Boolean value to indicate whether the triangle is filled
+		System.out.print("Please enter the triangle is filled or not:(true or false) ");
+		Boolean filled=input.nextBoolean();
+		
+
+	
+		Triangle triangle2= new Triangle (side1,side2,side3);
+
+		triangle2.setFilled(filled);
+		triangle2.setColor(colour);
+		
+		//Invoke the Triangle object’s getPerimeter() and toString()
+		System.out.println(triangle2);
+		//System.out.println(triangle2.toString());
+		System.out.println("The perimeter of triangle is "+ triangle2.getPerimeter()+".");
+
+	}
+
+}
